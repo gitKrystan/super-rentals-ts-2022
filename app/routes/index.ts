@@ -1,10 +1,15 @@
+import Store from '@ember-data/store';
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 
-export default class IndexRoute extends Route {
-  @service store;
+// eslint-disable-next-line ember/use-ember-data-rfc-395-imports
+import DS from 'ember-data';
+import RentalModel from 'super-rentals/models/rental';
 
-  async model() {
+export default class IndexRoute extends Route {
+  @service declare store: Store;
+
+  model(): DS.PromiseArray<RentalModel> {
     return this.store.findAll('rental');
   }
 }

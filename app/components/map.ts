@@ -3,8 +3,18 @@ import ENV from 'super-rentals/config/environment';
 
 const MAPBOX_API = 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static';
 
-export default class MapComponent extends Component {
-  get src() {
+interface MapSignature {
+  Args: {
+    lng: unknown;
+    lat: unknown;
+    width: unknown;
+    height: unknown;
+    zoom: unknown;
+  };
+}
+
+export default class MapComponent extends Component<MapSignature> {
+  get src(): string {
     let { lng, lat, width, height, zoom } = this.args;
 
     let coordinates = `${lng},${lat},${zoom}`;
@@ -14,7 +24,7 @@ export default class MapComponent extends Component {
     return `${MAPBOX_API}/${coordinates}/${dimensions}@2x?${accessToken}`;
   }
 
-  get token() {
+  get token(): string {
     return encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
   }
 }

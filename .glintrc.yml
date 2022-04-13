@@ -6,3 +6,4 @@ include:
   - 'app/routes/**'
   - 'app/components/rentals/filter.*'
   - 'app/components/map.*'
+  - 'app/components/share-button.*'

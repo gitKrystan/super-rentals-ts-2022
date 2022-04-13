@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 export default class RentalImageComponent extends Component {
   @tracked isLarge = false;
 
-  @action toggleSize() {
+  @action toggleSize(): void {
     this.isLarge = !this.isLarge;
   }
 }

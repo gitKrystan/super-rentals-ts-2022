@@ -7,3 +7,4 @@ include:
   - 'app/components/rentals/filter.*'
   - 'app/components/map.*'
   - 'app/components/share-button.*'
+  - 'app/components/rental/image.*'

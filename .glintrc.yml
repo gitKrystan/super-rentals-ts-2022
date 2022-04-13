@@ -1,0 +1,4 @@
+environment: ember-loose
+# FIXME: Remove include key before merge
+include:
+  - ''

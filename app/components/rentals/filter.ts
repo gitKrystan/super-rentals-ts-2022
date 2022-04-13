@@ -8,6 +8,9 @@ interface RentalsFilterSignature {
     rentals: ModelFrom<IndexRoute>;
     query: string;
   };
+  Blocks: {
+    default: [results: Array<RentalModel>];
+  };
 }
 
 export default class RentalsFilterComponent extends Component<RentalsFilterSignature> {

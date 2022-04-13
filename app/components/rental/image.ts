@@ -13,3 +13,9 @@ export default class RentalImageComponent extends Component<RentalImageSignature
     this.isLarge = !this.isLarge;
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Rental::Image': typeof RentalImageComponent;
+  }
+}

@@ -12,3 +12,9 @@ interface RentalsSignature {
 export default class RentalsComponent extends Component<RentalsSignature> {
   @tracked query = '';
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    Rentals: typeof RentalsComponent;
+  }
+}

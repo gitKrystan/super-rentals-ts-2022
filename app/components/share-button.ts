@@ -43,3 +43,9 @@ export default class ShareButtonComponent extends Component<ShareButtonSignature
     return url.toString();
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    ShareButton: typeof ShareButtonComponent;
+  }
+}

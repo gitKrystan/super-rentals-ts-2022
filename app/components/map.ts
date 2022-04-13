@@ -29,3 +29,9 @@ export default class MapComponent extends Component<MapSignature> {
     return encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    Map: typeof MapComponent;
+  }
+}

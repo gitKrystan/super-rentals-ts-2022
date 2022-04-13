@@ -24,3 +24,9 @@ export default class RentalsFilterComponent extends Component<RentalsFilterSigna
     return rentals;
   }
 }
+
+declare module '@glint/environment-ember-loose/registry' {
+  export default interface Registry {
+    'Rentals::Filter': typeof RentalsFilterComponent;
+  }
+}

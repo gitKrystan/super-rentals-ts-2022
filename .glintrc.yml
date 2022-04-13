@@ -8,3 +8,4 @@ include:
   - 'app/components/map.*'
   - 'app/components/share-button.*'
   - 'app/components/rental/image.*'
+  - 'app/components/rentals.*'

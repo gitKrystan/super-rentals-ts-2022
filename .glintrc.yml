@@ -5,3 +5,4 @@ include:
   - 'app/models/**'
   - 'app/routes/**'
   - 'app/components/rentals/filter.*'
+  - 'app/components/map.*'

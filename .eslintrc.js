@@ -28,6 +28,7 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'error',
+        'ember/no-empty-glimmer-component-classes': 'off',
         'prefer-const': 'off',
       },
     },

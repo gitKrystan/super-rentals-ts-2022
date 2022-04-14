@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -21,6 +21,17 @@ module.exports = {
   },
   rules: {},
   overrides: [
+    // typescript files
+    {
+      files: ['**/*.ts'],
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
+        'ember/no-empty-glimmer-component-classes': 'off',
+        'prefer-const': 'off',
+      },
+    },
     // node files
     {
       files: [
